@@ -28,8 +28,8 @@
     var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
     chart.draw(dataTable, options);
   }
-  // Récupération de données depuis notre API /Temperatures/
-  fetch('/Temperatures/')
+  // Récupération de données depuis notre API /paris/
+  fetch('/paris/')
     .then(response => response.json())
     .then(data => {
       drawChart(data);
