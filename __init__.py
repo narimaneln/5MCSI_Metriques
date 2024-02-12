@@ -30,14 +30,6 @@ def meteo():
 @app.route("/rapport/")
 def mongraphique():
     return render_template("graphique.html")
-
-@app.route("/historique/")
-def commits():
-    response = urlopen('https://api.github.com/repos/OpenRSI/5MCSI_Metriques/commits')
-    raw_content = response.read()
-    json_content = json.loads(raw_content.decode('utf-8'))
-    results = []
-  return jsonify(results=results)
   
 if __name__ == "__main__":
   app.run(debug=True)
